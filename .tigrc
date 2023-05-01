@@ -1,0 +1,39 @@
+bind main    R !git rebase -i %(commit)
+bind diff    R !git rebase -i %(commit)
+set main-view = id date author commit-title:graph=yes,refs=yes
+set line-graphics = ascii
+color "index "            blue    default
+color "diff-tree "        blue    default
+color "Merge: "           magenta default
+color "parent "           blue    default
+color "tree "         blue    default
+color date          blue    default
+color grep.file         blue    default
+color help-group        blue    default
+color diff-stat         cyan    default
+color graph-commit      blue    default
+set git-colors = \
+    branch.current=main-head \
+    branch.local=main-ref \
+    branch.plain=main-ref \
+    branch.remote=main-remote \
+    \
+    diff.meta=diff-header \
+    diff.meta=diff-index \
+    diff.meta=diff-oldmode \
+    diff.meta=diff-newmode \
+    diff.frag=diff-chunk \
+    diff.old=diff-del \
+    diff.new=diff-add \
+    \
+    grep.filename=grep.file \
+    grep.linenumber=grep.line-number \
+    grep.separator=grep.delimiter \
+    \
+    status.branch=status.header \
+    status.added=stat-staged \
+    status.updated=stat-staged \
+    status.changed=stat-unstaged \
+    status.untracked=stat-untracked
+color date         white black
+color graph-commit green black
